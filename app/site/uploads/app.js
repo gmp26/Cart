@@ -1,12 +1,14 @@
-var app = angular.module('app', ['config']);
+var app = angular.module('app', ['config', 'getpath']);
 
-app.controller("PlotCtrl", function($scope, settings) {
+app.controller("PlotCtrl", function($scope, settings, contentPath) {
  
 	var plotWidth=380;
 	var plotHeight=380;
 
 	var leftOffset=20;
 	var topOffset=20;
+
+	console.log("contentPath = " + contentPath);
 
 	var fCompare = function(f,x,y) {
 	  if(Math.abs(y-f(x)) < 1e-4) return 0;

@@ -1,32 +1,11 @@
 <!-- Copy this into the NRICH resource either by 
 	- copy/paste to the editor in Source mode or,
-	- as an XML Upload
+	- as an XML Upload.
+
+  Notes: 
+		There is a dependency on getpath so path to top can be resolved.
 	
-	Once inserted, wrap in the following div:
-	<div  ng-app="app">...</div>
 -->
-<div ng-app="app" class="contentwrap">
-	<h3>Touch and explain</h3>
-
-	<div class="col1">
-		<div class="touchArea" ng-controller="PlotCtrl">
-		  	<div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px"></div>
-		</div>
-	</div>
-	
-	<div class="col2">
-		<p>
-			Lots and lots of text in a big long line that goes on and on and on. 
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-			Lots and lots of text in a big long line that goes on and on and on.
-		</p>
-	</div>
-
+<div ng-app="app" class="contentwrap" ng-include="'{{contentPath}}/top.html'">	
 </div>
 
