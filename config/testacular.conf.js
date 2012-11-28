@@ -4,9 +4,9 @@ files = [
   JASMINE,
   JASMINE_ADAPTER,
   'app/lib/angular/angular.js',
-  'app/lib/angular/angular-*.js',
   'test/lib/angular/angular-mocks.js',
-  'app/**/*.js',
+  'app/lib/d3.v2.js',
+  'app/site/**/*.js',
   'test/unit/**/*.js'
 ];
 

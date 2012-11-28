@@ -1,4 +1,4 @@
-var app = angular.module('app', ['config', 'getpath']);
+var app = angular.module('app', ['config', 'getpath', 'functionGenerator']);
 
 app.controller("PlotCtrl", function($scope, settings, contentPath) {
  
@@ -34,11 +34,11 @@ app.controller("PlotCtrl", function($scope, settings, contentPath) {
 
   var toPlot = function(p) {
 		return[toX(p[0]), toY(p[1])];
-	}
+	};
 
   var fromPlot = function(p) {
 	  return[fromX(p[0]), fromY(p[1])];
-  }
+  };
 
 	$scope.dots = settings.initialSquare();
 
