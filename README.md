@@ -16,3 +16,9 @@ The plan is to use AngularJS to provide HTML directives, backed by D3 for data v
     ./scripts/webserver &
 
     Visit http://localhost:8000/app/index.html in a browser.
+
+### Branches
+
+ * master - the original CSS code using ng-repeat
+ * d3Repeat - using d3-repeat directive
+ 
