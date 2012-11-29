@@ -1,4 +1,4 @@
-var app = angular.module('app', ['config', 'getpath', 'functionGenerator']);
+var app = angular.module('app', ['config', 'getpath', 'funcGen']);
 
 app.controller("PlotCtrl", function($scope, settings, contentPath) {
  

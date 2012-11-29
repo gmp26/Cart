@@ -19,7 +19,7 @@
 .touchArea {
 	width:400px;
 	height:400px;
-	position:absolute;
+	position:relative;
   display:inline-block;
   padding: 19px;
   margin-bottom: 20px;
