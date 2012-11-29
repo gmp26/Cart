@@ -2,11 +2,16 @@
 
 <div class="col1">
 	<div class="touchArea" ng-controller="PlotCtrl">
-	  	<div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px"></div>
+	  <div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px"></div>
 	</div>
+	
+	<ddd-vis>
+		<ddd-dotplot f="x->x"></ddd-dotplot>
+	</ddd-vis>
+	
   <div class="touchArea" ng-controller="PlotCtrl">
-		<div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px" f="x -> 3*x+2" ></div>
-	</div>
+		<div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px" f="x->x" ></div>
+  </div>
 </div>
 
 <div class="col2">
