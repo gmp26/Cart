@@ -67,13 +67,7 @@ describe('funcGenSpec', function() {
 			var rf = fg.define('x -> sin(x)*sin(PI)');
 			expect(rf.f.toString()).toBe('Math.sin(x)*Math.sin(Math.PI)');
 		});
-/*
-		.replace(/LOG2E/g, 'Math.LOG2E')
-		.replace(/LOG10E/g, 'Math.LOG10E')
-		.replace(/SQRT1_2/g, 'Math.SQRT1_2')
-		.replace(/SQRT2/g, 'Math.SQRT2')
-		.replace(/E/g, 'Math.E')
-	*/	
+	
 		it('should cover these Math functions', function() {
 			expect(fg.define('x -> asin(x)').f).toBe('Math.asin(x)');
 			expect(fg.define('x -> acos(x)').f).toBe('Math.acos(x)');

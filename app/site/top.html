@@ -5,9 +5,9 @@
 	  <div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px"></div>
 	</div>
 	
-	<ddd-vis>
-		<ddd-dotplot f="x->x"></ddd-dotplot>
-	</ddd-vis>
+	<mgc-vis>
+		<mgc-dotplot f="x->x"></mgc-dotplot>
+	</mgc-vis>
 	
   <div class="touchArea" ng-controller="PlotCtrl">
 		<div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px" f="x->x" ></div>
