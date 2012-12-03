@@ -2,6 +2,8 @@ var app = angular.module('app', ['config', 'getpath', 'funcGen']);
 
 app.controller("PlotCtrl", function($scope, settings, contentPath) {
 
+	
+
 	var plotWidth = 380;
 	var plotHeight = 380;
 
@@ -35,6 +37,11 @@ app.controller("PlotCtrl", function($scope, settings, contentPath) {
 	var fromPlot = function(p) {
 			return [fromX(p[0]), fromY(p[1])];
 		};
+
+  $scope.x = 0;
+	$scope.f = "x -> x";
+
+	console.log("$scope.$id="+$scope.$id);
 
 	$scope.dots = settings.initialSquare();
 

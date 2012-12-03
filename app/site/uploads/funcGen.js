@@ -76,6 +76,7 @@ angular.module('funcGen', [], function($provide) {
 				}
 				if(paramList && funcBody && paramList.length > 0 && funcBody.length > 0) {
 					var f = new Function(paramList, "return "+funcBody+";");
+					console.log( "return "+funcBody+";");
 					var rf = function() {
 						var args = Array.prototype.slice.call(arguments);
 						return f.apply(this, arguments); 

@@ -1,44 +1,20 @@
 <h3>Touch and explain</h3>
 
-<div class="col1">
-<!--
-	<div class="touchArea" ng-controller="PlotCtrl">
-	  <div ng-repeat="dot in screenDots" class="dot {{fill(dot)}}" style="left:{{dot[0]}}px;top:{{dot[1]}}px"></div>
+<div class="col1" ng-controller="PlotCtrl">
+
+	<div style="padding-bottom: 5px; width:440px; text-align:right">
+	dot plot for the function f: <input ng-model="f" type="text"></input>
 	</div>
-		<mgc-dotplot f="x->sin(x)"></mgc-dotplot>
-		<mgc-dotplot f="x->cos(x)">{{[3,2]}}</mgc-dotplot>
 	
-  </div>
+	<!--
+	<mgc-define f="x->x"></mgc-define>
+	<mgc-define g="x->2*x"></mgc-define>
+	-->
+	
+	<div class="touchArea">		
+		<mgc-dotplot ng-repeat="dot in dots"> </mgc-dotplot>
+	</div>
+
 </div>
--->
 
-<style>
-input {
-	width:50px;
-}
 
-.mgc-eval {
-	color:red;
-	display:inline;
-}
-</style>
-
-<p>
-		If x = <input ng-model="x" value="0" type="number"></input>, then <i>to 3 significant figures</i>, f(x) is <span class="mgc-eval" f="x->3*sin(x)+2" sigfigs="3">&nbsp;</span> and 
-		g(x) is {{(2*x-2) | number:2}}.
-	</p>
-	<ol>
-		<li>
-			<p>Experiment until you find a value of x where f(x) appears to be the same as g(x).</p>
-		<p>How did you narrow the possibilities down to this value of x? Is there a general method?</p>
-	<p>
-		How close do you think f(x) and g(x) really are at this value? Can you find a value of x where f(x) should be even closer to g(x)?
-	</p>
-	</li>
-	<li>
-	<p>Experimentally, find a value of x so that f(x) = h(x). Here are their current values: f({{x}})=<span class="mgc-eval" f="x->3*sin(x)+2" sigfigs="3">&nbsp;</span>, and h({{x}})={{x/4-1}}. How does this problem compare to question 1?</p>
-	</li>
-	<li>
-	<p>What sorts of function are f, g and h? Can you find write down expressions for g(x) and h(x), and perhaps even f(x)?</p>
-	</li>
-</ol>
